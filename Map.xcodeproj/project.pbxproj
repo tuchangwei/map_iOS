@@ -26,6 +26,10 @@
 		3B6A53F91ACD70400017C804 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6A53F81ACD70400017C804 /* SystemConfiguration.framework */; };
 		3B6A53FB1ACD704C0017C804 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6A53FA1ACD704C0017C804 /* libz.dylib */; };
 		3B6A53FD1ACD70590017C804 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6A53FC1ACD70590017C804 /* libsqlite3.dylib */; };
+		3B6A54051ACD795F0017C804 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A54031ACD795F0017C804 /* LoginViewController.swift */; };
+		3B6A54061ACD795F0017C804 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6A54041ACD795F0017C804 /* LoginViewController.xib */; };
+		3B6A54091ACD7C550017C804 /* Parse_Logo_HiRes-copy3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6A54081ACD7C550017C804 /* Parse_Logo_HiRes-copy3.jpg */; };
+		3B6A540C1ACD7D700017C804 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A540B1ACD7D700017C804 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		3B6A53FA1ACD704C0017C804 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		3B6A53FC1ACD70590017C804 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		3B6A53FE1ACD71100017C804 /* Map-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Map-Bridging-Header.h"; sourceTree = "<group>"; };
+		3B6A54031ACD795F0017C804 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3B6A54041ACD795F0017C804 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		3B6A54081ACD7C550017C804 /* Parse_Logo_HiRes-copy3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Parse_Logo_HiRes-copy3.jpg"; sourceTree = "<group>"; };
+		3B6A540B1ACD7D700017C804 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,8 @@
 		3B6A53B51ACD68780017C804 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				3B6A540A1ACD7D5D0017C804 /* Models */,
+				3B6A54071ACD7C480017C804 /* Images */,
 				3B6A54021ACD779D0017C804 /* Controller */,
 				3B6A53DF1ACD6F0D0017C804 /* Vendor */,
 				3B6A53B81ACD68780017C804 /* AppDelegate.swift */,
@@ -194,8 +204,26 @@
 		3B6A54021ACD779D0017C804 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3B6A54031ACD795F0017C804 /* LoginViewController.swift */,
+				3B6A54041ACD795F0017C804 /* LoginViewController.xib */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		3B6A54071ACD7C480017C804 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3B6A54081ACD7C550017C804 /* Parse_Logo_HiRes-copy3.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		3B6A540A1ACD7D5D0017C804 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B6A540B1ACD7D700017C804 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,8 +306,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B6A54061ACD795F0017C804 /* LoginViewController.xib in Resources */,
 				3B6A53BE1ACD68780017C804 /* Main.storyboard in Resources */,
 				3B6A53C31ACD68780017C804 /* LaunchScreen.xib in Resources */,
+				3B6A54091ACD7C550017C804 /* Parse_Logo_HiRes-copy3.jpg in Resources */,
 				3B6A53C01ACD68780017C804 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +328,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B6A540C1ACD7D700017C804 /* User.swift in Sources */,
+				3B6A54051ACD795F0017C804 /* LoginViewController.swift in Sources */,
 				3B6A53BB1ACD68780017C804 /* ViewController.swift in Sources */,
 				3B6A53B91ACD68780017C804 /* AppDelegate.swift in Sources */,
 			);

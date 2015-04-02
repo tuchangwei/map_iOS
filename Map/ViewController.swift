@@ -11,8 +11,21 @@ import UIKit
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.view.backgroundColor = UIColor.whiteColor() 
+        if let instance = User.instance() {
+            
+           println("\(instance.userEmail)")
+            
+        } else {
+            
+//            var user = User(userName: "vale", userEmail: "1@1.com")
+//            user.store()
+            var loginVC:LoginViewController = LoginViewController(nibName: "LoginViewController",bundle: nil)
+            self.view.addSubview(loginVC.view);
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +33,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    
+    
 }
 

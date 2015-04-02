@@ -26,6 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: { (Bool successed, NSError error) -> Void in
             println("\(successed),\(error)")
         })
+        
+        //设置statusbar为白色
+        
+        UINavigationBar.appearance().barStyle = .Black
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         return true
     }
 
