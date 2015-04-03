@@ -30,6 +30,9 @@
 		3B6A54061ACD795F0017C804 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6A54041ACD795F0017C804 /* LoginViewController.xib */; };
 		3B6A54091ACD7C550017C804 /* Parse_Logo_HiRes-copy3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6A54081ACD7C550017C804 /* Parse_Logo_HiRes-copy3.jpg */; };
 		3B6A540C1ACD7D700017C804 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A540B1ACD7D700017C804 /* User.swift */; };
+		3B6A54111ACE80E90017C804 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6A540E1ACE80E90017C804 /* FBSDKShareKit.framework */; };
+		3B6A54121ACE80E90017C804 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6A540F1ACE80E90017C804 /* FBSDKLoginKit.framework */; };
+		3B6A54131ACE80E90017C804 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6A54101ACE80E90017C804 /* FBSDKCoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		3B6A54041ACD795F0017C804 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		3B6A54081ACD7C550017C804 /* Parse_Logo_HiRes-copy3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Parse_Logo_HiRes-copy3.jpg"; sourceTree = "<group>"; };
 		3B6A540B1ACD7D700017C804 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3B6A540E1ACE80E90017C804 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../../../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		3B6A540F1ACE80E90017C804 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../../../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		3B6A54101ACE80E90017C804 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 			files = (
 				3B6A53FD1ACD70590017C804 /* libsqlite3.dylib in Frameworks */,
 				3B6A53FB1ACD704C0017C804 /* libz.dylib in Frameworks */,
+				3B6A54121ACE80E90017C804 /* FBSDKLoginKit.framework in Frameworks */,
 				3B6A53F91ACD70400017C804 /* SystemConfiguration.framework in Frameworks */,
 				3B6A53F71ACD70330017C804 /* StoreKit.framework in Frameworks */,
 				3B6A53F51ACD70290017C804 /* Security.framework in Frameworks */,
@@ -88,7 +95,9 @@
 				3B6A53EF1ACD70070017C804 /* CoreLocation.framework in Frameworks */,
 				3B6A53ED1ACD6FEB0017C804 /* CoreGraphics.framework in Frameworks */,
 				3B6A53EB1ACD6FDA0017C804 /* CFNetwork.framework in Frameworks */,
+				3B6A54111ACE80E90017C804 /* FBSDKShareKit.framework in Frameworks */,
 				3B6A53E81ACD6FAB0017C804 /* AudioToolbox.framework in Frameworks */,
+				3B6A54131ACE80E90017C804 /* FBSDKCoreKit.framework in Frameworks */,
 				3B6A53E41ACD6F350017C804 /* Parse.framework in Frameworks */,
 				3B6A53E31ACD6F350017C804 /* Bolts.framework in Frameworks */,
 			);
@@ -168,6 +177,7 @@
 		3B6A53DF1ACD6F0D0017C804 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				3B6A540D1ACE80A70017C804 /* FBLib */,
 				3B6A53E71ACD6F770017C804 /* SystemLib */,
 				3B6A53E01ACD6F1E0017C804 /* ParseLib */,
 			);
@@ -224,6 +234,16 @@
 				3B6A540B1ACD7D700017C804 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3B6A540D1ACE80A70017C804 /* FBLib */ = {
+			isa = PBXGroup;
+			children = (
+				3B6A540E1ACE80E90017C804 /* FBSDKShareKit.framework */,
+				3B6A540F1ACE80E90017C804 /* FBSDKLoginKit.framework */,
+				3B6A54101ACE80E90017C804 /* FBSDKCoreKit.framework */,
+			);
+			name = FBLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,6 +479,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Map/Vendor",
 					"$(PROJECT_DIR)/Map/Vendor/ParseLib",
+					/Users/vale/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = Map/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -477,6 +498,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Map/Vendor",
 					"$(PROJECT_DIR)/Map/Vendor/ParseLib",
+					/Users/vale/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = Map/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -538,6 +560,7 @@
 				3B6A53D41ACD68780017C804 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B6A53D51ACD68780017C804 /* Build configuration list for PBXNativeTarget "MapTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +569,7 @@
 				3B6A53D71ACD68780017C804 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

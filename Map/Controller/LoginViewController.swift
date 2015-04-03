@@ -13,7 +13,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        var loginButton = FBSDKLoginButton()
+        loginButton.center = self.view.center
+        self.view.addSubview(loginButton)
     }
 
     override func didReceiveMemoryWarning() {
