@@ -11,11 +11,13 @@ import UIKit
 class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
-        var loginButton = FBSDKLoginButton()
-        loginButton.center = self.view.center
-        self.view.addSubview(loginButton)
+        
+        PFFacebookUtils.logInWithPermissions(["publish_actions"]) { (user:PFUser!, error: NSError!) -> Void in
+            
+            println("\(user.username?)")
+        }
     }
 
     override func didReceiveMemoryWarning() {
