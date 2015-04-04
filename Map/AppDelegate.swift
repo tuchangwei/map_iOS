@@ -28,13 +28,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: { (successed: Bool, error: NSError!) -> Void in
             
         })
-        
-        //设置statusbar为白色
+
         
         UINavigationBar.appearance().barTintColor = UIColor(red: 67.0/255.0, green: 129.0/255.0, blue: 251.0/255.0, alpha: 1.0)
-     //"Helvetica Neue UltraLight 17.0"
-        
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
+        //set the status bar white
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         return true
     }
