@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Initialize Parse.
         Parse.setApplicationId("5wyfBMwoiJwgutMg9XX1FvhvXSYxAwu8vXxynyNT", clientKey: "ZtlhmvsKJ4wQLeGJBEuDits257wygWrEFkmeRgje")
         PFFacebookUtils.initializeFacebook()
+        PFTwitterUtils.initializeWithConsumerKey("bzX9zPp5sF3ntHSiImcjrOAzb", consumerSecret: "B5KELNtkzIS1SjBAV1WHZ08rabAPM3WOKIVR4qGn9PHPbACD8q")
         //Track statistics around application opens
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: { (successed: Bool, error: NSError!) -> Void in
             

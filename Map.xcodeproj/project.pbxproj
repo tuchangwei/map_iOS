@@ -33,6 +33,7 @@
 		3BF1C04F1ACEEE4700AC4ED4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF1C04C1ACEEE4700AC4ED4 /* Parse.framework */; };
 		3BF1C0601ACEF2D500AC4ED4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF1C05F1ACEF2D500AC4ED4 /* Bolts.framework */; };
 		3BF1C0641ACEF33800AC4ED4 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF1C0631ACEF33800AC4ED4 /* FacebookSDK.framework */; };
+		3BF1C0671ACF80AA00AC4ED4 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF1C0651ACF809C00AC4ED4 /* Accounts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		3BF1C04C1ACEEE4700AC4ED4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		3BF1C05F1ACEF2D500AC4ED4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		3BF1C0631ACEF33800AC4ED4 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		3BF1C0651ACF809C00AC4ED4 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BF1C0671ACF80AA00AC4ED4 /* Accounts.framework in Frameworks */,
 				3BF1C0601ACEF2D500AC4ED4 /* Bolts.framework in Frameworks */,
 				3BF1C03A1ACEEAF400AC4ED4 /* Social.framework in Frameworks */,
 				3B6A53FD1ACD70590017C804 /* libsqlite3.dylib in Frameworks */,
@@ -199,6 +202,7 @@
 		3B6A53E71ACD6F770017C804 /* SystemLib */ = {
 			isa = PBXGroup;
 			children = (
+				3BF1C0651ACF809C00AC4ED4 /* Accounts.framework */,
 				3BF1C0381ACEEAE000AC4ED4 /* Social.framework */,
 				3B6A53FC1ACD70590017C804 /* libsqlite3.dylib */,
 				3B6A53FA1ACD704C0017C804 /* libz.dylib */,

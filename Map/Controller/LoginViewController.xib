@@ -33,6 +33,18 @@
                         <action selector="loginWithFB:" destination="-1" eventType="touchUpInside" id="SSm-i8-XVc"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hDs-Nh-ky5">
+                    <rect key="frame" x="30" y="299" width="261" height="46"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="18"/>
+                    <state key="normal" title="Login with Twitter">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="loginWithTwitter:" destination="-1" eventType="touchUpInside" id="t3F-0v-czS"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.2627450980392157" green="0.50588235294117645" blue="0.98431372549019602" alpha="0.97999999999999998" colorSpace="calibratedRGB"/>
             <point key="canvasLocation" x="380" y="356"/>

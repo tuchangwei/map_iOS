@@ -25,13 +25,23 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginWithFB(sender: AnyObject) {
         
-        PFFacebookUtils.logInWithPermissions(nil) { (user:PFUser!, error: NSError!) -> Void in
+        PFFacebookUtils.logInWithPermissions(nil) { (user: PFUser!, error: NSError!) -> Void in
             
             if let user = user {
                 
-                println("I am in!")
+                println("I am in from fb!")
             }
         }
     }
    
+    @IBAction func loginWithTwitter(sender: UIButton) {
+        
+        PFTwitterUtils.logInWithBlock { (user: PFUser!, error: NSError!) -> Void in
+            
+            if let user = user {
+                
+                println("I am in from twitter!")
+            }
+        }
+    }
 }
