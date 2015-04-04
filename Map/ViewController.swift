@@ -8,11 +8,12 @@
 
 import UIKit
 import MapKit
-class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class ViewController: UIViewController {
 
     
     @IBOutlet weak var mapView: MKMapView!
     var locationManager: CLLocationManager!
+    var currentLocation: CLLocation?
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -74,7 +75,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     func uploadLocation() {
         
-        
+        SVProgressHUD.show()
     }
     
     func setting() {
@@ -86,22 +87,26 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         // Dispose of any resources that can be recreated.
     }
 
-    //Mark - MKMapViewDelegate
+    
+}
+
+extension ViewController: MKMapViewDelegate, CLLocationManagerDelegate {
+    
+
     func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
         
         
         println("2")
     }
-    
-    // Mark: CLLocationManagerDelegate
+
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         
     }
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         
         let location:CLLocation = locations[0] as CLLocation
+        self.currentLocation = location
         self.setMapViewRegion(location)
         println("1")
     }
 }
-
