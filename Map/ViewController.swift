@@ -14,18 +14,23 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
-        if let instance = User.instance() {
+        
+        if let user = PFUser.currentUser()  {
             
-           println("\(instance.userEmail)")
+            println(user.username)
             
         } else {
             
-//            var user = User(userName: "vale", userEmail: "1@1.com")
-//            user.store()
+            
             var loginVC:LoginViewController = LoginViewController(nibName: "LoginViewController",bundle: nil)
+            self.addChildViewController(loginVC)
             self.view.addSubview(loginVC.view);
+            loginVC.didMoveToParentViewController(self)
+            
             
         }
+
+        
     }
 
     override func didReceiveMemoryWarning() {

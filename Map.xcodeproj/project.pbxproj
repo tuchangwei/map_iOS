@@ -27,7 +27,6 @@
 		3B6A54051ACD795F0017C804 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A54031ACD795F0017C804 /* LoginViewController.swift */; };
 		3B6A54061ACD795F0017C804 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6A54041ACD795F0017C804 /* LoginViewController.xib */; };
 		3B6A54091ACD7C550017C804 /* Parse_Logo_HiRes-copy3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6A54081ACD7C550017C804 /* Parse_Logo_HiRes-copy3.jpg */; };
-		3B6A540C1ACD7D700017C804 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A540B1ACD7D700017C804 /* User.swift */; };
 		3B6A54171ACE82150017C804 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A54161ACE82150017C804 /* UIView+Utils.m */; };
 		3BF1C03A1ACEEAF400AC4ED4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF1C0381ACEEAE000AC4ED4 /* Social.framework */; };
 		3BF1C04E1ACEEE4700AC4ED4 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF1C04B1ACEEE4700AC4ED4 /* ParseFacebookUtils.framework */; };
@@ -72,7 +71,6 @@
 		3B6A54031ACD795F0017C804 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3B6A54041ACD795F0017C804 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		3B6A54081ACD7C550017C804 /* Parse_Logo_HiRes-copy3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Parse_Logo_HiRes-copy3.jpg"; sourceTree = "<group>"; };
-		3B6A540B1ACD7D700017C804 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3B6A54151ACE82150017C804 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
 		3B6A54161ACE82150017C804 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 		3BF1C0381ACEEAE000AC4ED4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -237,7 +235,6 @@
 		3B6A540A1ACD7D5D0017C804 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3B6A540B1ACD7D700017C804 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -353,7 +350,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B6A540C1ACD7D700017C804 /* User.swift in Sources */,
 				3B6A54051ACD795F0017C804 /* LoginViewController.swift in Sources */,
 				3B6A53BB1ACD68780017C804 /* ViewController.swift in Sources */,
 				3B6A54171ACE82150017C804 /* UIView+Utils.m in Sources */,

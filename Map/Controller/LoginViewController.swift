@@ -14,10 +14,7 @@ class LoginViewController: UIViewController {
         
         super.viewDidLoad()
         
-        PFFacebookUtils.logInWithPermissions(["publish_actions"]) { (user:PFUser!, error: NSError!) -> Void in
-            
-            println("\(user.username?)")
-        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,14 +23,15 @@ class LoginViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func loginWithFB(sender: AnyObject) {
+        
+        PFFacebookUtils.logInWithPermissions(nil) { (user:PFUser!, error: NSError!) -> Void in
+            
+            if let user = user {
+                
+                println("I am in!")
+            }
+        }
     }
-    */
-
+   
 }
