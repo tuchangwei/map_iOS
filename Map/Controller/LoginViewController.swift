@@ -14,7 +14,6 @@ class LoginViewController: UIViewController {
         
         super.viewDidLoad()
         
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,6 +29,8 @@ class LoginViewController: UIViewController {
             if let user = user {
                 
                 println("I am in from fb!")
+                self.view.removeFromSuperview()
+                self.removeFromParentViewController()
             }
         }
     }
@@ -40,7 +41,8 @@ class LoginViewController: UIViewController {
             
             if let user = user {
                 
-                println("I am in from twitter!")
+                self.view.removeFromSuperview()
+                self.removeFromParentViewController()
             }
         }
     }
