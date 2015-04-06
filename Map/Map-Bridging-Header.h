@@ -6,3 +6,4 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "UIView+Utils.h"
 #import "SVProgressHUD.h"
+#import <FacebookSDK/FacebookSDK.h>

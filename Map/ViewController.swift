@@ -58,15 +58,12 @@ class ViewController: UIViewController {
         self.setupMap()
         if let user = PFUser.currentUser()  {
             
-            println(user.username)
+            self.navigationController?.setNavigationBarHidden(false, animated: false)
 
         } else {
-
-            var loginVC:LoginViewController = LoginViewController(nibName: "LoginViewController",bundle: nil)
-            self.addChildViewController(loginVC)
-            self.view.addSubview(loginVC.view);
-            loginVC.didMoveToParentViewController(self)
             
+            
+            self.loadLoginView()
             
         }
 
@@ -78,7 +75,7 @@ class ViewController: UIViewController {
         let rightBarItem = UIBarButtonItem(title: "Upload", style: .Plain, target: self, action:"uploadLocation")
         self.navigationItem.rightBarButtonItem = rightBarItem
         
-        let leftBarItem = UIBarButtonItem(title: "Setting", style: .Plain, target: self, action:"setting")
+        let leftBarItem = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action:"logout")
         self.navigationItem.leftBarButtonItem = leftBarItem
     }
     func setupMap() {
@@ -145,14 +142,25 @@ class ViewController: UIViewController {
         
     }
     
-    func setting() {
+    func logout() {
         
+        PFUser.logOut()
+        self.loadLoginView()
+    }
+    func loadLoginView() {
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        var loginVC:LoginViewController = LoginViewController(nibName: "LoginViewController",bundle: nil)
+        loginVC.delegate = self;
+        self.addChildViewController(loginVC)
+        self.view.addSubview(loginVC.view);
+        loginVC.didMoveToParentViewController(self)
         
     }
-    
     func showAllLocations() {
         
-        let query =  PFQuery(className: ttLocationKey)
+        //note here: if don't use includeKey method, I can't get the userInfo below.
+        let query =  PFQuery(className: ttLocationKey).includeKey(ttUserKey)
         query.findObjectsInBackgroundWithBlock { (locations:[AnyObject]!, error:NSError!) -> Void in
             
             if locations != nil && locations.count > 0 {
@@ -161,7 +169,8 @@ class ViewController: UIViewController {
                     
                     let pfObject = locations[i] as PFObject
                     var userInfo:PFUser = pfObject.objectForKey(ttUserKey) as PFUser
-                    var location = Location(name: userInfo.username, location: CLLocationCoordinate2D(latitude: pfObject.objectForKey(ttLatitudeKey) as CLLocationDegrees, longitude: pfObject.objectForKey(ttLongitudeKey) as CLLocationDegrees))
+                    println(userInfo.username)
+                    var location = Location(name: userInfo.objectForKey(ttScreenNameKey) as String, location: CLLocationCoordinate2D(latitude: pfObject.objectForKey(ttLatitudeKey) as CLLocationDegrees, longitude: pfObject.objectForKey(ttLongitudeKey) as CLLocationDegrees))
                     self.mapView.addAnnotation(location)
                     
                 }
@@ -173,7 +182,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: MKMapViewDelegate, CLLocationManagerDelegate {
+extension ViewController: MKMapViewDelegate, CLLocationManagerDelegate, LoginViewControllerDelegate {
     
 
     func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
@@ -215,5 +224,10 @@ extension ViewController: MKMapViewDelegate, CLLocationManagerDelegate {
         }
         
         println("1")
+    }
+    
+    func afterlogin() {
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
 }
